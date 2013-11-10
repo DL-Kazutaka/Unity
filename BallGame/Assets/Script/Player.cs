@@ -26,6 +26,9 @@ public class Player : MonoBehaviour {
 	
 	void OnCollisionEnter(Collision collision)
 	{
-		this.is_landing = true;
+		if (collision.gameObject.tag == "Floor")
+		{
+			this.is_landing = true;
+		}
 	}
 }
